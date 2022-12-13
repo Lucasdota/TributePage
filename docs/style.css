@@ -1,0 +1,128 @@
+/*smooth scroll behavior when a button is clicked for instance*/
+@media (prefers-reduced-motion: no-preference) {
+    * {
+      scroll-behavior: smooth;
+    }
+  }
+
+.skip{  
+    position:absolute;/*sets the position off the screen but still in the code*/
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+}
+
+.skip:focus{/*when the user press tab, this is the first element a screen reader will read*/
+    position:static;
+    width:auto;
+    height:auto;   
+}
+
+body{
+    font-family:Tahoma, sans-serif;
+}
+
+main{
+    background-color: rgb(226, 226, 226);
+    border-radius:5px;
+    padding:1rem;
+}
+
+header{
+    text-align:center;  
+    font-size:2em;
+    margin-top:-20px;
+}
+
+header p{
+    font-size:0.8em;
+    margin-top:-30px;
+}
+
+figure{
+    text-align: center;
+    background-color: white;
+    border-radius: 5px;
+    padding:2em 0;
+}
+
+img{
+    width:100%;
+    max-width:55rem;
+    border-radius: 2px;
+}
+
+#bio{
+    width:50%;
+    margin:auto;
+}
+
+#bio h2{
+    text-align: center;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+ul{
+    padding-top:2em;
+}
+
+li{
+    font-size:1.5em;
+    padding-bottom:1.5em;
+    font-family:verdana;
+}
+
+.quote{
+    font-size:2em; 
+    margin-left: 2em;
+}
+
+h2:last-of-type{    
+    text-align: center;
+    padding-top:2em;
+}
+
+a:last-of-type{
+    color:black;
+}
+
+a:last-of-type:visited{
+    color:blueviolet;
+}
+
+a:last-of-type:focus{
+    color:white;
+}
+
+a:last-of-type:active{
+    color:gray;
+}
+
+/*resize fonts to better fit small devices such as mobile*/
+@media screen and (max-width:640px){
+    h1{
+        font-size:1em;
+    }
+
+    header p{
+        font-size:0.5em;
+        margin-top:-15px;
+    }
+
+    #bio{
+        width:80%;
+    }
+
+    #bio li{
+        font-size:1em;
+    }
+
+    .quote{
+        font-size:1.5em;
+    }   
+}
